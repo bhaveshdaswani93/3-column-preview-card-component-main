@@ -1,0 +1,44 @@
+:root {
+  --color-orange: hsl(31, 77%, 52%);
+  --color-dark-cyan: hsl(184, 100%, 22%);
+  --color-very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+.card-container {
+  padding: 24px;
+}
+
+.card-container:first-of-type {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-container:last-of-type {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.card-container--orange {
+  background-color: var(--color-orange);
+}
+
+.card-container--dark-cyan {
+  background-color: var(--color-dark-cyan);
+}
+
+.card-container--very-dark-cyan {
+  background-color: var(--color-very-dark-cyan);
+}
+
+.btn {
+  background-color: white;
+  border: none;
+  border-radius: 9999px;
+  /* color: var(--color-very-dark-cyan); */
+  cursor: pointer;
+  /* font-family: "Kumbh Sans", sans-serif; */
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 24px;
+  text-transform: uppercase;
+}
