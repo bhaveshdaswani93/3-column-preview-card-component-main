@@ -8,14 +8,20 @@
 body {
   font-size: calc((15 / 16) * 1rem);
   font-family: 'Lexend Deca', sans-serif;
+  
 }
 
 .card-container {
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+
+  @media screen and (min-width: 768px) {
+    min-height: 30rem;
+    padding-bottom: 3rem;
+  }
 }
 
 .card__title {
@@ -24,20 +30,37 @@ body {
   font-weight: 700;
   font-family: 'Big Shoulders Display', sans-serif;
   text-transform: uppercase;
+  font-size: 32px;
 }
 
 .card__paragraph {
   color: var(--color-transparent-white);
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: auto;
+  }
 }
 
 .card-container:first-of-type {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+
+  @media screen and (min-width: 768px) {
+    /* border-top-left-radius: 0.5rem; */
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+  }
 }
 
 .card-container:last-of-type {
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+
+  @media screen and (min-width: 768px) {
+    /* border-top-left-radius: 0.5rem; */
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.5rem;
+  }
 }
 
 .card-container--orange {
@@ -54,7 +77,7 @@ body {
 
 .btn {
   background-color: white;
-  border: none;
+  /* border: none; */
   border-radius: 9999px;
   /* color: var(--color-very-dark-cyan); */
   cursor: pointer;
@@ -62,7 +85,13 @@ body {
   font-size: calc((15 / 16) * 1rem);
   /* font-weight: 700; */
   padding: 0.75rem 1.5rem;
+  border: 2px solid white;
   /* text-transform: uppercase; */
+}
+
+.btn:hover {
+  color: hsl(0, 0%, 95%);
+  border: 2px solid hsl(0, 0%, 95%);
 }
 
 .btn--orange {
@@ -79,9 +108,17 @@ body {
 
 .main {
   padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media screen and (min-width: 576px) {
     padding: 0;
   }
     
+}
+
+.row-custom {
+  max-width: calc(768/16 * 1rem);
 }
